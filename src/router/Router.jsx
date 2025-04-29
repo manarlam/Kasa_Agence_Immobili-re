@@ -1,9 +1,10 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import Nav from '../nav/Nav';
-import Home from '../pages/Home';
-import About from '../pages/About';
-import NotFound from '../pages/NotFound';
+import Nav from '../components/nav/Nav';
+import Home from '../components/pages/Home';
+import About from '../components/pages/About';
+import NotFound from '../components/pages/NotFound';
+import Header from '../components/header/Header';
 
 function AppRouter() {
   return (
