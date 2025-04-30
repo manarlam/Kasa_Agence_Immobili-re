@@ -7,7 +7,7 @@ function Nav() {
   return (
     <>
       <Header />
-      <nav>
+      <nav className="nav">
         <Link to="/">Accueil</Link>
         <Link to="/about">À propos</Link>
       </nav>
