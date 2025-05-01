@@ -1,0 +1,29 @@
+.banner {
+    height: 200px;
+}
+
+.banner_img {
+    border-radius: 20px;
+    width: 1240px;
+    height: 223px;
+    overflow: hidden;
+    object-fit: cover;
+    display:flex;
+    justify-content: center;
+    align-items: center;    
+    margin: 0 auto;
+}
+
+.banner_title {
+    position: absolute;
+    left: 50%;  
+    top: 15%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    text-shadow: 0px 0px 8px rgba(0,0,0,1);
+}
+
+

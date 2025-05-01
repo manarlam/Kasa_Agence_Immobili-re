@@ -1,9 +1,9 @@
 import React from 'react';
 import AppRouter from './router/Router';
 import './styles/global/global.scss';
-import './styles/components/header.scss';
-import './styles/components/nav.scss';
-import './styles/pages/home.scss';
+import './styles/layout/header.scss';
+import './styles/layout/nav.scss';
+
 
 
 function App() {
