@@ -2,27 +2,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
-    background-color: white;
-  
-    .logo_kasa {
-      height: 20px;
-    }
-  
-    nav {
-      display: flex;
-      gap: 20px;
-  
-      a {
-        color: #ff6060;
-        font-weight: bold;
-        font-size: 1.2rem;
-        text-decoration: none;
-  
-        &:hover {
-          text-decoration: underline;
-        }
-      }
-    }
+    margin: 0;
+
   }
 

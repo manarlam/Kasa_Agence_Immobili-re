@@ -1,15 +1,15 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import Nav from '../components/nav/Nav';
+import Layout from '../components/layout/Layout';
 import Home from '../components/pages/Home';
 import About from '../components/pages/About';
 import NotFound from '../components/pages/NotFound';
-import Header from '../components/header/Header';
+
 
 function AppRouter() {
   return (
     <Routes>
-      <Route path="/" element={<Nav />}>
+      <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
         <Route path="about" element={<About />} />
         <Route path="*" element={<NotFound />} />

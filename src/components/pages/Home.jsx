@@ -1,8 +1,12 @@
 import React from 'react';
-import Header from "../header/Header";
+
+
 
 function Home() {
-  return <h1>Kasa Location Immobilière</h1>;
+  return (
+  <div className="home">
+  </div>
+  );
 }
 
 export default Home;

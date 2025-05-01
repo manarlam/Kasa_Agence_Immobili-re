@@ -3,6 +3,8 @@ import AppRouter from './router/Router';
 import './styles/global/global.scss';
 import './styles/components/header.scss';
 import './styles/components/nav.scss';
+import './styles/pages/home.scss';
+
 
 function App() {
   return (
