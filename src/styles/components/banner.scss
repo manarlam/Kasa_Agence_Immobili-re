@@ -1,8 +1,10 @@
 .banner {
-    height: 200px;
+    height: 223px;
+    position: relative;
 }
 
 .banner_img {
+    filter: brightness(0.5);
     border-radius: 20px;
     width: 1240px;
     height: 223px;
@@ -17,7 +19,7 @@
 .banner_title {
     position: absolute;
     left: 50%;  
-    top: 15%;
+    top: 40%;
     transform: translate(-50%, -50%);
     font-size: 50px;
     font-weight: bold;
