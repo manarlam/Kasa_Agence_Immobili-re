@@ -2,9 +2,7 @@ import React from 'react';
 import Banner from '../../components/banner/Banner';
 import HomeBanner from '../../assets/images/banner/home_banner.png';
 import Gallery from '../../components/gallery/gallery'; 
-import '../../styles/components/banner.scss';
-import '../../styles/components/card.scss';
-import '../../styles/components/gallery.scss';
+
 
 
 function Home() {

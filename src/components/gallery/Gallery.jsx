@@ -2,6 +2,7 @@ import React from 'react';
 import logements from '../../data/logement.json';
 import { Link } from 'react-router-dom';
 import Card from '../card/card';
+import '../../styles/components/gallery.scss';
 
 function Gallery() {
     return (
@@ -13,7 +14,7 @@ function Gallery() {
                         <Card image={logement.cover} title={logement.title} />
                     </Link>
                 </article>
-                    );
+                );
             }
             )}
         </div>

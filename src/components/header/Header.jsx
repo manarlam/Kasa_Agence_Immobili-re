@@ -5,9 +5,9 @@ import Nav from '../nav/Nav';
 function Header() {
     return (
         <header className="header">
-            <figure className="logo_kasa">
+
             <img src={logo} alt="Logo Kasa" className="logo"/>
-            </figure>
+
             <Nav className="nav"/>
         </header>
     );
