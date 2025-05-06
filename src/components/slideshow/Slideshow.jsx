@@ -16,7 +16,7 @@ function Slideshow({ images, title }) {
 
     return (
         <div className="slideshow">
-            <img src={images[currentIndex]} alt={title} className="slideshow_img" />
+            <img src={images[currentIndex]} alt={title} className="slideshow-img" />
             {/*Number of images*/}
             {images.length > 1 && (
             <div className="slideshow-numbers">
@@ -25,11 +25,11 @@ function Slideshow({ images, title }) {
             )}
             {/*Buttons*/}
             <div>
-                <div className="slideshow_buttons">
-                    <button className="slideshow_button" onClick={prevSlide}>
+                <div className="slideshow-buttons">
+                    <button className="slideshow-button-prev" onClick={prevSlide}>
                         <FontAwesomeIcon icon={faChevronLeft} />
                     </button>
-                    <button className="slideshow_button" onClick={nextSlide}>
+                    <button className="slideshow-button-next" onClick={nextSlide}>
                         <FontAwesomeIcon icon={faChevronRight} />
                     </button>
                 </div>

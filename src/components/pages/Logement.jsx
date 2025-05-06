@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import logements from '../../data/logement.json';
 import Slideshow from '../slideshow/slideshow';
 import Collapse from '../collapse/Collapse';
+import "../../styles/components/logement.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 
@@ -19,11 +20,19 @@ function Logement() {
             <div className="logement-slideshow">
                 <Slideshow images={logement.pictures}/>
             </div>
-            <div className="logement-infos">
-                <div className="logement-infos-host">
-                    <p>{logement.host.name}</p>
-                    <img src={logement.host.picture} alt={logement.host.name} className="host_picture" />
+            <div className="logement-infos"> 
+                <div className="logement-header">
+                    <h1>{logement.title}</h1>
+                    <p>{logement.location}</p>
                 </div>
+                <div className="logement-infos-host">
+                <p className="host-name">
+                    {logement.host.name.split(' ').map((part, index) => (
+                    <span key={index}>{part}<br/></span>
+                    ))}
+                </p>
+                    <img src={logement.host.picture} alt={logement.host.name} className="host-picture" />
+                </div> 
                 <div className="logement-infos-tags">
                     {logement.tags.map((tag, index) => (
                         <span key={index} className="logement-infos-tag">{tag}</span>
@@ -36,8 +45,7 @@ function Logement() {
                         ))}
                     </div>
                 </div>
-                <h1>{logement.title}</h1>
-                <p>{logement.location}</p>
+               
             </div>
             <div className="logement-details">
                 <Collapse title="Description">
