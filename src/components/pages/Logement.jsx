@@ -52,7 +52,11 @@ function Logement() {
                     <p>{logement.description}</p>
                 </Collapse>
                 <Collapse title="Équipements"> 
-                <p>{logement.equipments.map((equipments, index) => <li key={index}>{equipments}</li>)}</p>
+                    <ul>
+                        {logement.equipments.map((equipement, index) => (
+                        <li key={index}>{equipement}</li>
+                    ))}
+                    </ul>
                 </Collapse>
             </div>
         </>
