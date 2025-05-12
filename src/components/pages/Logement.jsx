@@ -6,13 +6,14 @@ import Collapse from '../collapse/Collapse';
 import "../../styles/components/logement.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from '@fortawesome/free-solid-svg-icons';
+import { Navigate } from 'react-router-dom';
 
 function Logement() {
     const { id } = useParams();
     const logement = logements.find((logement) => logement.id === id);
 
     if (!logement) {
-        return <div>Logement non trouvé</div>;
+        return <Navigate to="/404" replace/>;
     }
 
     return (
