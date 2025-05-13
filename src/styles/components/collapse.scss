@@ -1,45 +1,57 @@
 .collapse {
-    width: 1023px;
-    height:auto;
-    margin: 30px auto;
-    display: flex;
-    flex-direction: column;
-    background-color: #f6f6f662;
-    border-radius: 5px;
-}
+  width: 1023px;
+  height: auto;
+  margin: 30px auto;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
 
-.collapse-header {
+  &-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: #FF6060;
     color: white;
     border-radius: 5px;
-}
+    background-color: #FF6060;
+  }
 
-.collapse-button {
+  &-button {
     background-color: transparent;
     border: none;
     color: white;
     font-size: 24px;
     cursor: pointer;
-}
+    transition: transform 0.4s ease;
 
-.collapse-title {
+    &.rotate {
+      transform: rotate(-180deg);
+    }
+  }
+
+  &-title {
     margin: 0;
     align-items: center;
-    background-color: #FF6060;
     color: white;
     border-radius: 5px;
     font-size: 24px;
     font-weight: bold;
-}
+  }
 
-.collapse-content {
+  &-content {
+    max-height: 0;
+    overflow: hidden;
     font-size: 15px;
+    border-radius: 5px;
+    background-color: #f6f6f693;
     color: black;
-    padding: 15px 20px;
-    transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    padding: 0 20px;
+    transition: height 200ms ease-in-out, padding 200ms ease-in-out;
 
+    &.visible {
+      max-height: 500px;
+      padding: 15px 20px;
+    }
+  }
 }
+

@@ -4,25 +4,26 @@
     align-items: center;
     justify-content: center;
     gap: 139px;
-}
 
-.notfound-title {
-    font-size: 288px;
-    color: #ff6060;
-    margin: 0;
-}
 
-.notfound-text {
-    font-size: 38px;
-    color: #ff6060;
-    margin: 0;
-    text-align: center;
-}
+    &-title {
+        font-size: 288px;
+        color: #ff6060;
+        margin: 0;
+    }
 
-.notfound-link {
-    color: black;
-    font-size: 18px;
-    margin-top: 20px;
-    padding: 10px 20px;
-    border-radius: 5px;
+    &-text {
+        font-size: 38px;
+        color: #ff6060;
+        margin: 0;
+        text-align: center;
+    }
+
+    &-link {
+        color: black;
+        font-size: 18px;
+        margin-top: 20px;
+        padding: 10px 20px;
+        border-radius: 5px;
+    }
 }

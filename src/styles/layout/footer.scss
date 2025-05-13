@@ -9,13 +9,14 @@
     justify-content: center;
     margin-top: auto;
     gap: 30px;
-}
 
-.footer-logo {
-   padding-top: 60px;
-}
 
-.footer-text {
-    font-size: 24px;
-    text-align: center;
+    &-logo {
+    padding-top: 60px;
+    }
+
+    &-text {
+        font-size: 24px;
+        text-align: center;
+    }
 }

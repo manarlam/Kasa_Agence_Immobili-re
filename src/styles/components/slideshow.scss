@@ -1,51 +1,51 @@
 .slideshow {
-    position: relative;
-    width: 100%;
-    max-width: 1240px;
+  position: relative;
+  width: 100%;
+  max-width: 1240px;
+  height: 415px;
+  margin: 0 auto;
+  
+  &-img {
+    width: 1240px;
     height: 415px;
+    object-fit: cover;
+    border-radius: 15px;
+    display: flex;
     margin: 0 auto;
+  }
   
-    .slideshow-img {
-      width: 1240px;
-      height: 415px;
-      object-fit: cover;
-      border-radius: 15px;
-      display: flex;
-      margin: 0 auto;
-    }
+  &-numbers {
+    position: absolute;
+    bottom: 20px;
+    right: 50%;
+    color: white;
+    font-size: 1rem;
+    padding: 0.2rem 0.6rem;
+    border-radius: 0.5rem;
+  }
   
-    .slideshow-numbers {
-      position: absolute;
-      bottom: 20px;
-      right: 50%;
-      color: white;
-      font-size: 1rem;
-      padding: 0.2rem 0.6rem;
-      border-radius: 0.5rem;
-    }
-  
-    .slideshow-buttons {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 1;
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
+  &-buttons {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
 
   
-      .slideshow-button-prev,
-      .slideshow-button-next {
-        background: none;
-        border: none;
-        color: white;
-        font-size: 4rem;
-        cursor: pointer;
-        padding: 0 1rem;
+  .slideshow-button-prev,
+  .slideshow-button-next {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 4rem;
+    cursor: pointer;
+    padding: 0 1rem;
   
         &:hover {
-          color: #ff6060;
+        color: #ff6060;
         }
       }
     }
