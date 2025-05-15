@@ -1,12 +1,24 @@
+@import "../utils/mixins";
+
 nav {
     display: flex;
     justify-content: flex-end;
-    gap: 60px;
+
+    @include respond-to("mobile") {
+        width: 100%;
+        justify-content: space-between;
+    }
 
     a {
     color:black;
     font-size: 1.5rem;
     text-decoration: none;
+    padding-left: 3rem;
+    
+    @include respond-to("mobile") {
+        font-size: 1rem;
+        padding: 0;
+    }
 
     &:hover {
     text-decoration: underline;

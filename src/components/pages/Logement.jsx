@@ -18,36 +18,45 @@ function Logement() {
 
     return (
         <>
+        <secion className="logement">
             <div className="logement-slideshow">
                 <Slideshow images={logement.pictures}/>
             </div>
-            <div className="logement-infos"> 
-                <div className="logement-header">
+            <div className="logement-infos">
+                <div className="logement-infos-left">
+                    <div className="logement-header">
                     <h1>{logement.title}</h1>
                     <p>{logement.location}</p>
-                </div>
-                <div className="logement-infos-host">
-                <p className="host-name">
-                    {logement.host.name.split(' ').map((part, index) => (
-                    <span key={index}>{part}<br/></span>
-                    ))}
-                </p>
-                    <img src={logement.host.picture} alt={logement.host.name} className="host-picture" />
-                </div> 
-                <div className="logement-infos-tags">
+                    </div>
+
+                    <div className="logement-infos-tags">
                     {logement.tags.map((tag, index) => (
                         <span key={index} className="logement-infos-tag">{tag}</span>
                     ))}
-                </div>
-                <div className="logement-infos-rating">
-                    <div className="stars">
-                        {Array.from({ length: 5 }, (_, index) => (
-                            <span key={index} className={index < logement.rating ? 'filled' : 'empty'}><FontAwesomeIcon icon={faStar}/></span>
-                        ))}
                     </div>
                 </div>
-               
-            </div>
+
+                <div className="logement-infos-right">
+                    <div className="logement-infos-host">
+                    <p className="host-name">
+                        {logement.host.name.split(' ').map((part, index) => (
+                        <span key={index}>{part}<br /></span>
+                        ))}
+                    </p>
+                    <img src={logement.host.picture} alt={logement.host.name} className="host-picture" />
+                    </div>
+
+                    <div className="logement-infos-rating">
+                    <div className="stars">
+                        {Array.from({ length: 5 }, (_, index) => (
+                        <span key={index} className={index < logement.rating ? 'filled' : 'empty'}>
+                            <FontAwesomeIcon icon={faStar} />
+                        </span>
+                        ))}
+                    </div>
+                    </div>
+                </div>
+                </div>
             <div className="logement-details">
                 <Collapse title="Description">
                     <p>{logement.description}</p>
@@ -60,6 +69,7 @@ function Logement() {
                     </ul>
                 </Collapse>
             </div>
+        </secion>
         </>
     );
 }
