@@ -1,5 +1,11 @@
 @import "../utils/mixins";
 
+.logement {
+  width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
 .logement-slideshow {
   width: 100%;
   border-radius: 1rem;
@@ -9,7 +15,6 @@
 .logement-infos {
   display: grid;
   grid-template-columns: 3fr 1fr;
-  max-width: $max-width;
   margin: 0 auto;
   gap: 1rem;
 
@@ -26,6 +31,10 @@
       font-size: 2rem;
       margin: 0;
       color: #ff6060;
+
+      @include respond-to("tablet") {
+        font-size: 1.5rem;
+      }
     }
 
     p {
@@ -46,6 +55,10 @@
       padding: 0.3rem 2rem;
       font-size: 0.9rem;
       white-space: nowrap;
+      @include respond-to("tablet") {
+        padding: 0.3rem 1rem;
+        font-size: 0.8rem;
+      }
     }
   }
 
@@ -98,6 +111,7 @@
       justify-content: space-between;
       align-items: center;
       gap: 1rem;
+      width: 100%;
     }
     .logement-infos-host {
       justify-content: space-between;
@@ -113,68 +127,7 @@
     }
   }
 
-  @include respond-to("mobile") {
-    grid-template-columns: 1fr;
-
-
-    .logement-infos-tags {
-      flex-wrap: nowrap;
-      overflow-x: auto;
-      margin-top: 0.5rem;
-
-      .logement-infos-tag {
-        font-size: 0.8rem;
-        padding: 0.3rem 1rem;
-      }
-    }
-
-    .logement-infos-right {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-      gap: 1rem;
-
-      .logement-infos-rating {
-        order: -1;
-        font-size: 1.2rem;
-        display: flex;
-        justify-content: flex-start;
-
-        .stars {
-          gap: 0.3rem;
-          display: flex;
-        }
-      }
-
-      .logement-infos-host {
-        order: 0;
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-
-        .host-name {
-          font-size: 1rem;
-          margin: 0;
-          text-align: right;
-          white-space: nowrap;
-        }
-
-        .host-picture {
-          width: 40px;
-          height: 40px;
-          border-radius: 50%;
-          object-fit: cover;
-        }
-      }
-    }
-
-    .logement-header {
-      h1 {
-        font-size: 1.5rem;
-      }
-    }
-  }
+ 
 }
 
 .logement-details {
@@ -195,11 +148,7 @@
 
   @include respond-to("tablet") {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 0;
   }
 
-  @include respond-to("mobile") {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
 }

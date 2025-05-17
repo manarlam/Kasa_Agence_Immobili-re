@@ -9,8 +9,8 @@ function Home() {
   return (
   <main className="main">
     <div className="home">
-    <Banner image={HomeBanner} title="Chez vous, partout et ailleurs"/>
-    <Gallery />
+      <Banner image={HomeBanner} title="Chez vous, partout et ailleurs"/>
+      <Gallery />
     </div>
   </main>
   );

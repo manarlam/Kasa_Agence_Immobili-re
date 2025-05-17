@@ -69,9 +69,8 @@
     }
   }
 
-  // 📱 Mobile
   @include respond-to("mobile") {
-    height: 200px;
+    height: 300px;
 
     &-buttons {
       .slideshow-button-prev,

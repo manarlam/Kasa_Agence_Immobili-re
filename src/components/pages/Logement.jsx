@@ -17,8 +17,8 @@ function Logement() {
     }
 
     return (
-        <>
-        <secion className="logement">
+    <>
+    <section className="logement">
             <div className="logement-slideshow">
                 <Slideshow images={logement.pictures}/>
             </div>
@@ -69,8 +69,8 @@ function Logement() {
                     </ul>
                 </Collapse>
             </div>
-        </secion>
-        </>
+    </section>
+    </>
     );
 }
 

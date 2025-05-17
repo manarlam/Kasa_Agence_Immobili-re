@@ -1,11 +1,17 @@
+@import "../utils/mixins";
+
 .collapse {
-  width: 1023px;
+  width: 100%;
+  max-width: $max-width;
   height: auto;
   margin: 30px auto;
   display: flex;
   flex-direction: column;
   border-radius: 5px;
 
+   @include respond-to("tablet, mobile") {
+    width: 100%;
+  }
   &-header {
     display: flex;
     justify-content: space-between;
