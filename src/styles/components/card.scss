@@ -1,7 +1,9 @@
+@import "../utils/mixins";
+@import "../utils/variables";
 
 .card {
   position: relative;
-  border-radius: 20px;
+  border-radius: $radius-md;
   overflow: hidden;
   height: 340px;
   transition: transform 0.3s ease;
@@ -19,12 +21,11 @@
 
   &_title {
     position: absolute;
-    bottom: 20px;
-    left: 20px;
-    color: #fff;
-    font-size: 1rem;
+    bottom: $spacing-md;
+    left: $spacing-md;
+    @include text($font-sm, $color-text-light, normal);
     margin: 0;
     z-index: 1;
-    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
   }
 }

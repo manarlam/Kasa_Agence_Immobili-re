@@ -1,26 +1,24 @@
 @import "../utils/mixins";
 
 .home_gallery {    
-    background-color: #F6F6F6;
-    border-radius: 20px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    background-color: $color-secondary;
+    border-radius: $radius-lg;
+    @include grid(repeat(3, 1fr), $spacing-lg);
     width: 100%;
     max-width: $max-width;
-    margin: 40px auto;
-    gap: 40px;
+    margin: $spacing-lg auto;
     box-sizing: border-box;
-    padding: 40px;
+    padding: $spacing-lg;
 
     @include respond-to('tablet') {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-        padding: 20px;
-    }
-// a adapter
+    grid-template-columns: repeat(2, 1fr);
+    gap: $spacing-md;
+    padding: $spacing-md;
+  }
+
     @include respond-to('mobile') {
-        grid-template-columns: repeat(1, 1fr);
-        gap: 20px;
-        padding: 20px;
+    grid-template-columns: repeat(1, 1fr);
+    gap: $spacing-md;
+    padding: $spacing-md;
     }
 }

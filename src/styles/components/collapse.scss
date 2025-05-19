@@ -4,29 +4,33 @@
   width: 100%;
   max-width: $max-width;
   height: auto;
-  margin: 30px auto;
+  margin: $spacing-lg auto;
   display: flex;
   flex-direction: column;
-  border-radius: 5px;
+  border-radius: $radius-sm;
 
-   @include respond-to("tablet, mobile") {
+   @include respond-to("tablet") {
     width: 100%;
+    height: auto;
   }
+
+  @include respond-to("mobile") {
+    margin: $spacing-md auto;
+  }
+
   &-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    color: white;
-    border-radius: 5px;
-    background-color: #FF6060;
+    @include flex(space-between, center);
+    padding: $spacing-sm $spacing-lg;
+    color: $color-text-light;
+    border-radius: $radius-sm;
+    background-color: $color-primary;
   }
 
   &-button {
     background-color: transparent;
     border: none;
-    color: white;
-    font-size: 24px;
+    color: $color-text-light;
+    font-size: $font-lg;
     cursor: pointer;
     transition: transform 0.4s ease;
 
@@ -37,27 +41,23 @@
 
   &-title {
     margin: 0;
-    align-items: center;
-    color: white;
-    border-radius: 5px;
-    font-size: 24px;
-    font-weight: bold;
+    @include text($font-lg, $color-text-light, bold);
+    border-radius: $radius-sm;
   }
 
   &-content {
     max-height: 0;
     overflow: hidden;
-    font-size: 15px;
-    border-radius: 5px;
-    background-color: #f6f6f693;
-    color: black;
-    padding: 0 20px;
+    font-size: $font-md;
+    border-radius: $radius-sm;
+    background-color: rgba($color-secondary, 0.9);
+    color: $color-text-dark;
+    padding: 0 $spacing-lg;
     transition: height 200ms ease-in-out, padding 200ms ease-in-out;
 
     &.visible {
       max-height: 500px;
-      padding: 15px 20px;
+      padding: $spacing-md $spacing-lg;
     }
   }
 }
-

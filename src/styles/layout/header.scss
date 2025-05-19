@@ -1,20 +1,17 @@
 @import "../utils/mixins";
+@import "../utils/variables";
 
 .header {
-  padding: 50px 20px;
+  padding: $spacing-lg $spacing-md;
   width: 100%;
   box-sizing: border-box;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  @include flex(space-between, center);
   margin: 0 auto;
 
   .container {
-    max-width: $max-width;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 1rem;
+    @include container;
+    @include flex(space-between, center);
+    gap: $spacing-md;
   }
 
   img {
@@ -26,13 +23,11 @@
   }
 
   @include respond-to("mobile") {
-    padding: 20px;
+    padding: $spacing-md;
   }
 }
 
-.main-content, header {
-  max-width: $max-width;
-  margin: 0 auto;
-  padding: 0 20px;
-  width: 100%;
+.main-content,
+header {
+  @include container;
 }

@@ -10,3 +10,32 @@
     @warn "Breakpoint '#{$breakpoint}' non défini.";
   }
 }
+
+@mixin flex($justify: center, $align: center, $direction: row, $wrap: nowrap) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+  flex-wrap: $wrap;
+}
+
+@mixin grid($cols: 1fr 1fr, $gap: 1rem) {
+  display: grid;
+  grid-template-columns: $cols;
+  gap: $gap;
+}
+
+@mixin text($size: $font-md, $color: $color-text-dark, $weight: normal) {
+  font-size: $size;
+  color: $color;
+  font-weight: $weight;
+}
+
+
+@mixin container {
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+  box-sizing: border-box;
+}

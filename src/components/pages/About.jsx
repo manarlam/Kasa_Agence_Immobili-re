@@ -7,7 +7,7 @@ import AboutBanner from '../../assets/images/banner/about_banner.png';
 function About() {
   return (
     <div className="about">
-      <Banner image={AboutBanner} />
+      <Banner image={AboutBanner}/>
       <Collapse title="Fiabilité">
         <p>
           Les annonces postées sur Kasa garantissent une fiabilité totale. 
